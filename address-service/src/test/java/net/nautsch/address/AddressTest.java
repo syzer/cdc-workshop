@@ -44,4 +44,18 @@ public class AddressTest {
         // then
         assertThat(result, is(givenId));
     }
+
+    @Test
+    public void shouldValidAdress() {
+
+        // given
+        String streatName = "limmat";
+        Address sut = a.address().withId(streatName).build();
+
+        // when
+        String result = sut.getId();
+
+        // then
+        assertThat(result, is(streatName));
+    }
 }

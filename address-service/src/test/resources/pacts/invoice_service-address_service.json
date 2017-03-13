@@ -20,6 +20,7 @@
                 },
                 "body": {
                     "firstName": "Jan",
+                    "street": "Limmat",
                     "surname": "Wloka"
                 },
                 "matchingRules": {
@@ -27,6 +28,9 @@
                         "match": "type"
                     },
                     "$.body.surname": {
+                        "match": "type"
+                    },
+                    "$.body.street": {
                         "match": "type"
                     }
                 }

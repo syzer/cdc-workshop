@@ -24,6 +24,11 @@ class AddressImpl implements Address {
         return firstName;
     }
 
+    @Override
+    public String getStreet() {
+        return "Limmat";
+    }
+
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }

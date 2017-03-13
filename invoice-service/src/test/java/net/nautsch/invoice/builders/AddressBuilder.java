@@ -37,5 +37,10 @@ public class AddressBuilder {
         public String getFirstName() {
             return firstname;
         }
+
+        @Override
+        public String getStreet() {
+            return "Limmat";
+        }
     }
 }

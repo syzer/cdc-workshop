@@ -33,7 +33,8 @@ public class AddressServiceAdapterTest {
     public void shouldDeliverValidAddress() {
         PactDslJsonBody responseBody = new PactDslJsonBody()
                 .stringType("firstName", "Jan")
-                .stringType("surname", "Wloka");
+                .stringType("surname", "Wloka")
+                .stringType("street", "Limmat");
 
         PactFragment pact = buildPact("", responseBody, "get an address");
 
@@ -42,6 +43,7 @@ public class AddressServiceAdapterTest {
 
             assertThat(actual.getFirstName(), is("Jan"));
             assertThat(actual.getSurname(), is("Wloka"));
+            assertThat(actual.getStreet(), is("Limmat"));
         });
     }
     // end::shouldDeliverValidAddress[]

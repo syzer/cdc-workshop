@@ -9,4 +9,5 @@ public interface Address {
 
     String getFirstName();
 
+    String getStreet();
 }
