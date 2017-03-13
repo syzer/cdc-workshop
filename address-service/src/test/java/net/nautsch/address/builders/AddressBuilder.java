@@ -7,6 +7,7 @@ public class AddressBuilder {
     private String id = "1";
     private String surname = "Wloka";
     private String firstName = "Jan";
+    private String streetName = "Limmat";
 
     public AddressBuilder withId(String id) {
         this.id = id;
@@ -14,6 +15,6 @@ public class AddressBuilder {
     }
 
     public Address build() {
-        return new Address(id, surname, firstName);
+        return new Address(id, surname, firstName, streetName);
     }
 }
