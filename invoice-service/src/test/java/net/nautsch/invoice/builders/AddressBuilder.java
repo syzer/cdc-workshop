@@ -9,6 +9,7 @@ public class AddressBuilder {
 
     private String surname = "surname";
     private String firstname = "firstname";
+    private String streetname = "limmat";
 
     AddressBuilder() {
         super();
@@ -40,7 +41,7 @@ public class AddressBuilder {
 
         @Override
         public String getStreet() {
-            return "Limmat";
+            return streetname;
         }
     }
 }

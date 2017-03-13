@@ -34,6 +34,7 @@ public class AddressServiceAdapterTest {
         PactDslJsonBody responseBody = new PactDslJsonBody()
                 .stringType("firstName", "Jan")
                 .stringType("surname", "Wloka")
+                // string tolerance is different from value
                 .stringType("street", "Limmat");
 
         PactFragment pact = buildPact("", responseBody, "get an address");
