@@ -18,9 +18,9 @@ public class Addresses {
 
     // tag::Addresses[]
     Addresses() {
-        add(new Address("1","Wloka", "Jan",  "Limmat"));
-        add(new Address("2","Nieminen", "Miko", "Limmat2"));
-        add(new Address("3","Nautsch", "Oliver", "Limmat3"));
+        add(new Address("1","Wloka", "Jan", "Mr.", "Limmat"));
+        add(new Address("2","Nieminen", "Miko", "Mr.", "Limmat2"));
+        add(new Address("3","Nautsch", "Oliver", "Mr.", "Limmat3"));
     }
     // end::Addresses[]
 

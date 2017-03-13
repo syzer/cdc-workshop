@@ -16,7 +16,7 @@ public class AddressTest {
     public void shouldContainSurname() {
         // given
         String givenSurname = "Wloka";
-        Address address = new Address("1", givenSurname, "", "");
+        Address address = new Address("1", givenSurname, "", "", "");
         // when
         String result = address.getSurname();
         // then
@@ -27,7 +27,7 @@ public class AddressTest {
     public void shouldReturnFirstname() {
         // given
         String givenFirstName = "Jan";
-        Address address = new Address("1","", givenFirstName, "");
+        Address address = new Address("1","", givenFirstName, "", "");
         // when
         String result = address.getFirstName();
         // then
@@ -57,5 +57,19 @@ public class AddressTest {
 
         // then
         assertThat(result, is(streetName));
+    }
+
+    @Test
+    public void shouldValidTitle() {
+
+        // given
+        String title = "Mr.";
+        Address sut = a.address().withId("1").build();
+
+        // when
+        String result = sut.getTitle();
+
+        // then
+        assertThat(result, is(title));
     }
 }

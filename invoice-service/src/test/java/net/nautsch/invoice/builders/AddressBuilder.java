@@ -9,7 +9,8 @@ public class AddressBuilder {
 
     private String surname = "surname";
     private String firstname = "firstname";
-    private String streetname = "limmat";
+    private String streetname = "streetname";
+    private String title = "title";
 
     AddressBuilder() {
         super();
@@ -29,6 +30,11 @@ public class AddressBuilder {
         return this;
     }
 
+    public AddressBuilder withStreet(String streetname) {
+        this.firstname = streetname;
+        return this;
+    }
+
     private class AddressDummy implements Address {
         @Override
         public String getSurname() {
@@ -42,6 +48,11 @@ public class AddressBuilder {
         @Override
         public String getStreet() {
             return streetname;
+        }
+
+        @Override
+        public String getTitle() {
+            return title;
         }
     }
 }

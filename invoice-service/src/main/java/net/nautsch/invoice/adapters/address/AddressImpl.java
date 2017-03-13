@@ -10,6 +10,7 @@ class AddressImpl implements Address {
     private String surname;
     private String firstName;
     private String streetName;
+    private String title;
 
     @Override
     public String getSurname() {
@@ -27,8 +28,13 @@ class AddressImpl implements Address {
 
     @Override
     public String getStreet() {
-        //TODO provider provider wrong value here
-        return "Limmat";
+//        return "Limmat"; // :trollface:
+        return streetName;
+    }
+
+    @Override
+    public String getTitle() {
+        return title;
     }
 
     public void setFirstName(String firstName) {
@@ -37,5 +43,9 @@ class AddressImpl implements Address {
 
     public void setStreetName(String streetName) {
         this.streetName = streetName;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 }

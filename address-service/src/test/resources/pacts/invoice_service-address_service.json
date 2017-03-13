@@ -20,17 +20,21 @@
                 },
                 "body": {
                     "firstName": "Jan",
-                    "street": "Limmat",
-                    "surname": "Wloka"
+                    "streetName": "Limmat",
+                    "surname": "Wloka",
+                    "title": "Mr."
                 },
                 "matchingRules": {
+                    "$.body.title": {
+                        "match": "type"
+                    },
                     "$.body.firstName": {
                         "match": "type"
                     },
                     "$.body.surname": {
                         "match": "type"
                     },
-                    "$.body.street": {
+                    "$.body.streetName": {
                         "match": "type"
                     }
                 }

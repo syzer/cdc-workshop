@@ -13,13 +13,14 @@ import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.TestContextManager;
 
+//TODO only one of Folder or Broker can be set on given time
 /**
  * running the net.nautsch.address.pact tests against our provider implementation.
  */
 @RunWith(PactRunner.class) // Say JUnit to run tests with custom Runner
 @Provider("address_service")
-@PactFolder("pacts")
-//@PactBroker(host="broker.nautsch.net", port = "80")
+//@PactFolder("pacts")
+@PactBroker(host="broker.nautsch.net", port = "80")
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 public class PactProviderVerificationTest {
 
